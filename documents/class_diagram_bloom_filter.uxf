@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=10
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1014</x>
+      <y>936</y>
+      <w>390</w>
+      <h>325</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;10.0;280.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>1053</y>
+      <w>39</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>936</y>
+      <w>429</w>
+      <h>325</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>310.0;10.0;10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>689</y>
+      <w>1729</w>
+      <h>832</h>
+    </coordinates>
+    <panel_attributes>bloomfilter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>312</x>
+      <y>234</y>
+      <w>1417</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>benchMark	</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>403</x>
+      <y>377</y>
+      <w>325</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>RunnerBenchmarks
+--
+--
++ main(args []) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>897</x>
+      <y>481</y>
+      <w>299</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>210.0;10.0;210.0;140.0;10.0;140.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>286</y>
+      <w>728</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>BenchTest
+--
+~array = BloomFilterArray.fillArray(3, 1000, 0.1, 0, 100): BloomFilterArray
+~arrayList = BloomFilterArrayList.fillArray(3, 1000, 0.1, 0, 100): BloomFilterArrayList
+~linkedList = BloomFilterLinkedList.fillArray(3, 1000, 0.1, 0, 100): BloomFilterLinkedList
+--
++presentArray(): boolean
++presentArrayList(): boolean
++presentLinkedList(): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>715</x>
+      <y>806</y>
+      <w>312</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>/bloomFilter::BloomFilter/
+--
+~k: int
+~m: int
+~n: double
+--
++BloomFilter(int, int, double)
++hashfunction(Object, int): int
++addElement(Object): void
++isPresent(Object): boolean
++getN(): double
++getM(): int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>1235</y>
+      <w>468</w>
+      <h>221</h>
+    </coordinates>
+    <panel_attributes>BloomFilterArray
+--
+-array: boolean[]
+--
++BloomFilterArray(int, int, double)
++getArray(): boolean[]
+-initArray(int): void
++addElement(Object): void
++isPresent(Object): boolean
++fillArray(int, int, double, int, int): BloomFilterArray
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>1235</y>
+      <w>507</w>
+      <h>221</h>
+    </coordinates>
+    <panel_attributes>BloomFilterArrayList
+--
+-arrayList: ArrayList&lt;Boolean&gt;
+--
++BloomFilterArrayList(int, int, double)
++getArray(): ArrayList&lt;Boolean&gt;
+-initArrayList(int): void
++addElement(Object): void
++isPresent(Object): boolean
++fillArray(int, int, double, int, int): BloomFilterArrayList
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1183</x>
+      <y>1235</y>
+      <w>494</w>
+      <h>221</h>
+    </coordinates>
+    <panel_attributes>BloomFilterLinkedList
+--
+-linkedList: LinkedList&lt;Boolean&gt;
+--
++BloomFilterLinkedList(int, int, double)
++getArray(): LinkedList&lt;Boolean&gt;
+-initLinkedList(int): void
++addElement(Object): void
++isPresent(Object): boolean
++fillArray(int, int, double, int, int): BloomFilterLinkedList
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1781</x>
+      <y>793</y>
+      <w>468</w>
+      <h>455</h>
+    </coordinates>
+    <panel_attributes>errorRate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1885</x>
+      <y>871</y>
+      <w>299</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Error
+--
+--
++Error()
++errorRate(BloomFilter b): double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1911</x>
+      <y>1092</y>
+      <w>234</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>RunError
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2002</x>
+      <y>975</y>
+      <w>78</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1014</x>
+      <y>858</y>
+      <w>923</w>
+      <h>299</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>690.0;210.0;420.0;210.0;420.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>793</x>
+      <y>0</y>
+      <w>442</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Bloom filter App class diagram
+fontsize=20
+bg=orange
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
