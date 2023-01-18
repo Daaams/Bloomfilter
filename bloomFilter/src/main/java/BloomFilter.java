@@ -22,4 +22,5 @@ public abstract class BloomFilter {
         return (int) ((-n*Math.log(m)) / Math.pow(Math.log(2), 2));
     }
 
+
 }
