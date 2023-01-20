@@ -115,7 +115,7 @@ It is the same as arrays, the average execution time here is also very small. It
 
 LinkedList are slow compared to arrays or arraylists. To access elements stored at specific indexes, it is necessary to browse the list by following the cell links by cell until the one sought.
 
-We arrive here at a time execution average of 717,724 ns/op. which is around 140,7 time more quick than a simple array.
+We arrive here at a time execution average of 717,724 ns/op. which is around 140,7 time slower than a simple array.
 
 ### <u>General Results</u>
 ![graphic benchmark](./documents/grapgicsBenchMarksResults.png)
